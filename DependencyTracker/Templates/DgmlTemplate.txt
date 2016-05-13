@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="TopToBottom" Layout="Sugiyama" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+{--NODES--}
+  </Nodes>
+  <Links>
+{--GROUP CONTAINER LINKS--}
+{--ASSEMBLY REFERENCES--}"
+  </Links>
+  <Categories>
+    <Category Id="Contains" Label="Contains" Description="Whether the source of the link contains the target object" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Contained By" IsContainment="True" OutgoingActionLabel="Contains" />
+  </Categories>
+  <Properties>
+    <Property Id="FileGroupSize" Label="FileGroupSize" Description="FileGroupSize" DataType="System.Int32" />
+    <Property Id="IsAssembly" DataType="System.String" />
+    <Property Id="Suspicious" DataType="System.String" />
+  </Properties>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Show relative size" ValueLabel="Function">
+      <Condition Expression="FileGroupSize &gt; 0 and Group='Collapsed' or FileGroupSize &gt; 0 and IsAssembly" />
+      <Setter Property="FontSize" Expression="Math.Max(9,Math.Sqrt(FileGroupSize))" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Assemblies" ValueLabel="Nodes">
+      <Condition Expression="IsAssembly" />
+      <Setter Property="Background" Value="#000000" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Suspicious references" ValueLabel="Links">
+      <Condition Expression="Suspicious" />
+      <Setter Property="StrokeDashArray" Value="3,3" />
+    </Style>
+  </Styles>
+</DirectedGraph>

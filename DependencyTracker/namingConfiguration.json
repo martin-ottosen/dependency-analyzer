@@ -1,0 +1,25 @@
+{
+	"ProductNameOverrides": {
+		
+	},
+	"ProductNameFallBacks": {
+		"ecmascript.net.": "Ecmascript for .Net",
+		"mvp.xml": "Mvp.Xml",
+		"google.apis": "Google APIs",
+		"telerik.web.ui": "Telerik.Web.UI",
+		"componentart": "Component Art"
+	},
+	"CompanyNameOverrides": {
+		"Microsoft": "Microsoft"
+	},
+	"CompanyNameFallbacks": {
+		"DotNetOpenAuth": "DotNetOpenAuth community",
+		"OAuthLinkedIn": "OAuthLinkedIn community",
+		"ecmascript.net": "Ecmascript community",
+		"yahoo.": "Yahoo! Inc",
+		"mvp.xml": "Microsoft MVPs in XML technologies",
+		"google.": "Google Inc",
+		"telerik.": "Telerik",
+		"lucene.": "The Apache Software Foundation"
+	}
+}
